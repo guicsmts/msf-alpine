@@ -1,6 +1,6 @@
 # Thc 7pine
 
-Firstly, the 7pine image was created to meet my needs. THC 7pine must be maintained at finite moments; that is, in small blocks of time in distracting or leisure moments.
+First, the 7pine image was created to meet my needs to do some tests in a local environment.
 
 ## Getting Started
 
