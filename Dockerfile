@@ -56,14 +56,3 @@ RUN for MSF in $(ls msf*); do \
 		ln -s /opt/metasploit-framework/$MSF /usr/local/bin/$MSF; \
 	fi \
 done
-
-
-
-
-
-
-
-
-
-
-
