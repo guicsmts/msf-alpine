@@ -48,3 +48,8 @@ CONTAINER ID        IMAGE                      COMMAND             CREATED      
 docker attach 7pine
 /opt/metasploit-framework #
 ```
+Md5 Dockerfile
+
+```
+MD5 (Dockerfile) = afd1502b30b76aecee379a9f5b400f51
+```
