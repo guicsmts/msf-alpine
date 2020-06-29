@@ -23,6 +23,7 @@ RUN apk update && apk upgrade
 RUN apk add --no-cache python2 python3 \
     py-pip \
     perl \
+    perl-net-dns \
     ruby-full \
     ruby-dev 
 
@@ -56,3 +57,6 @@ RUN for MSF in $(ls msf*); do \
 		ln -s /opt/metasploit-framework/$MSF /usr/local/bin/$MSF; \
 	fi \
 done
+
+# end Dockerfile
+WORKDIR /home/7pine/

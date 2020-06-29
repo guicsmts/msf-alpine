@@ -1,0 +1,60 @@
+Patched the usage output to use the proper binary name.
+--- a/fierce.pl
++++ b/fierce.pl
+@@ -117,7 +117,7 @@ quit_early($version_num) if $version;
+ 
+ if (!$dns && !$range) {
+   output("You have to use the -dns switch with a domain after it.");
+-  quit_early("Type: perl fierce.pl -h for help");
++  quit_early("Type: fierce -h for help");
+ } elsif ($dns && $dns !~ /[a-z\d.-]\.[a-z]*/i) {
+   output("\n\tUhm, no. \"$dns\" is gimp. A bad domain can mess up your day.");
+   quit_early("\tTry again.");
+@@ -500,9 +500,9 @@ sub quit_early {
+ 
+ sub help {
+   print <<EOHELP;
+-fierce.pl (C) Copywrite 2006,2007 - By RSnake at http://ha.ckers.org/fierce/
++fierce (C) Copywrite 2006,2007 - By RSnake at http://ha.ckers.org/fierce/
+ 
+-	Usage: perl fierce.pl [-dns example.com] [OPTIONS]
++	Usage: fierce [-dns example.com] [OPTIONS]
+ 
+ Overview:
+ 	Fierce is a semi-lightweight scanner that helps locate non-contiguous
+@@ -525,7 +525,7 @@ Options:
+ 		Inside the file specified the text "Host:\\n" will be replaced
+ 		by the host specified. Usage:
+ 
+-	perl fierce.pl -dns example.com -connect headers.txt
++	fierce -dns example.com -connect headers.txt
+ 
+ 	-delay		The number of seconds to wait between lookups.
+ 	-dns		The domain you would like scanned.
+@@ -548,7 +548,7 @@ Options:
+ 		-dnsserver).  Note, that this does not support a pattern
+ 		and will simply output anything it finds.  Usage:
+ 
+-	perl fierce.pl -range 111.222.333.0-255 -dnsserver ns1.example.co
++	fierce -range 111.222.333.0-255 -dnsserver ns1.example.co
+ 
+ 	-search		Search list.  When fierce attempts to traverse up and
+ 		down ipspace it may encounter other servers within other
+@@ -557,7 +557,7 @@ Options:
+ 		This is especially useful if the corporate servers are named
+ 		different from the public facing website.  Usage:
+ 
+-	perl fierce.pl -dns examplecompany.com -search corpcompany,blahcompany 
++	fierce -dns examplecompany.com -search corpcompany,blahcompany 
+ 
+ 		Note that using search could also greatly expand the number of
+ 		hosts found, as it will continue to traverse once it locates
+@@ -578,7 +578,7 @@ Options:
+ 		but can uncover a lot more information.
+ 	-wordlist	Use a seperate wordlist (one word per line).  Usage:
+ 
+-	perl fierce.pl -dns examplecompany.com -wordlist dictionary.txt
++	fierce -dns examplecompany.com -wordlist dictionary.txt
+ EOHELP
+ exit;
+ }

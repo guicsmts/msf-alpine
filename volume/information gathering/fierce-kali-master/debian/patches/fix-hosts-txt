@@ -1,0 +1,18 @@
+Index: fierce/fierce.pl
+===================================================================
+--- fierce.orig/fierce.pl	2013-10-15 13:12:51.176669733 +0200
++++ fierce/fierce.pl	2013-10-15 13:32:13.072645647 +0200
+@@ -245,11 +245,11 @@
+ } elsif ($dns) {
+   output("\nUnsuccessful in zone transfer (it was worth a shot)");
+   output("Okay, trying the good old fashioned way... brute force");
+-  $wordlist = $wordlist || 'hosts.txt';
++  $wordlist = $wordlist || '/usr/share/fierce/hosts.txt';
+   if (-e $wordlist) {
+     # user provided or default
+     open (WORDLIST, '<', $wordlist)   or 
+-    open (WORDLIST, '<', 'hosts.txt') or
++    open (WORDLIST, '<', '/usr/share/fierce/hosts.txt') or
+     quit_early("Can't open $wordlist or the default wordlist");
+     for (<WORDLIST>){
+       chomp;
