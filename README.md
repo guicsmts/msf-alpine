@@ -19,7 +19,7 @@ To build 7 pine you need to have the container tool, docker installed.
 ### Building 7pine
 
 ```
-docker build -f patch/to/Dockerfile -t your-tag/thc-7pine:1.0 .
+docker build -f path/to/Dockerfile -t your-tag/thc-7pine:1.0 .
 ```
 
 After building the 7pine image, execute the following commands.
