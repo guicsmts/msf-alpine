@@ -1,5 +1,5 @@
 FROM alpine
-MAINTAINER thc logic_
+MAINTAINER guicsmts
 
 # update alpine
 RUN apk update && apk upgrade
