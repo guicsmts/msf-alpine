@@ -1,4 +1,4 @@
-# Thc 7pine
+# Th 7pine
 
 First, the 7pine image was created to meet my needs to do some tests in a local environment.
 
